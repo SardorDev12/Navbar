@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+nav {
+  height: 10vh;
+  box-shadow: 0 0 10px grey;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar-logo,
+.navbar-toggle {
+  font-size: 1.6rem;
+  color: sienna;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar-logo > span {
+  color: green;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 1rem 0 1rem 1rem;
+  font-size: 1.3rem;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar-menu,
+.navbar-links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-menu > a,
+.navbar-links i {
+  color: black;
+}
+
+.show-links {
+  height: 10rem;
+}
+
+.show-icons {
+  height: 3rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .navbar {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-menu,
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .navbar-links {
+    gap: 1rem;
+  }
+}
